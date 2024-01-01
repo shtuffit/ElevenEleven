@@ -2,9 +2,7 @@
 
 countdown()
 (
-  IFS=:
-  set -- $*
-  secs=$(( ${1#0} * 3600 + ${2#0} * 60 + ${3#0} ))
+  secs=$1
   while [ $secs -gt 0 ]
   do
     sleep 1 &
@@ -15,4 +13,4 @@ countdown()
   echo
 )
 
-countdown "11:11"
+countdown 671
